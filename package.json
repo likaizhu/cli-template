@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve": "vue-cli-service serve ",
+    "build:rel": "vue-cli-service build --mode development",
+    "build": "vue-cli-service build --mode production",
+    "lint": "vue-cli-service lint",
+    "lint:style": "stylelint **/*.{html,vue}"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -18,6 +20,13 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "html-webpack-plugin": "^3.2.0",
+    "less-loader": "^7.0.2",
+    "stylelint": "^13.7.2",
+    "stylelint-config-recess-order": "^2.3.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-webpack-plugin": "^2.1.1",
     "vue-template-compiler": "^2.6.11"
   },
   "gitHooks": {
@@ -30,72 +39,6 @@
     ]
   },
   "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {
-      "no-console": "error",
-      "comma-dangle": [
-        1,
-        "always-multiline"
-      ],
-      "no-dupe-keys": 2,
-      "semi": [
-        "error",
-        "never"
-      ],
-      "no-extra-semi": "error",
-      "array-bracket-spacing": [
-        2,
-        "never"
-      ],
-      "comma-spacing": [
-        2,
-        {
-          "before": false,
-          "after": true
-        }
-      ],
-      "no-multiple-empty-lines": [
-        1,
-        {
-          "max": 1
-        }
-      ],
-      "space-infix-ops": 2,
-      "no-empty-function": "error",
-      "eqeqeq": [
-        "error",
-        "allow-null"
-      ],
-      "space-before-blocks": [
-        "error",
-        "always"
-      ],
-      "space-in-parens": [
-        "error",
-        "never"
-      ],
-      "object-curly-spacing": [
-        1,
-        "always"
-      ],
-      "no-shadow": 0,
-      "no-use-before-define": "error",
-      "init-declarations":"error",
-      "no-const-assign":"error",
-      "no-var": "error",
-      "require-yield":0,
-      "generator-star-spacing": [2, { "before": true, "after": true }]
-    }
   },
   "browserslist": [
     "> 1%",

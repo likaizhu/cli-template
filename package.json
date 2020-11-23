@@ -1,6 +1,8 @@
 {
-  "name": "template",
-  "version": "0.1.0",
+  "name": "{{projectName}}",
+  "version": "{{projectVersion}}",
+  "author": "{{projectAuthor}}",
+  "description": "{{projectDescription}}",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve ",
@@ -9,8 +11,6 @@
     "lint": "vue-cli-service lint",
     "lint:style": "stylelint **/*.{html,vue}"
   },
-  "author": "likaizhu",
-  "description": "脚手架",
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
